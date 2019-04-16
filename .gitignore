@@ -1,0 +1,6 @@
+.env
+.env.generated
+.idea/
+node_modules/
+package-lock.json
+yarn.lock
