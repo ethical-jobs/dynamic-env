@@ -1,6 +1,6 @@
 {
   "name": "@ethical-jobs/dynamic-env",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Helper scripts and documentation for creating Javascript apps with a dynamically deployed environment.",
   "keywords": [
     "environment",
