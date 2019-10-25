@@ -147,7 +147,7 @@ project.
 ```json
 {
   "scripts": {
-    "dev": "gen-env && react-scripts start"
+    "dev": "env-gen && react-scripts start"
   }
 }
 ```
