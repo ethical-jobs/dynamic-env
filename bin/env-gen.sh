@@ -7,7 +7,13 @@ ENV_JS=${ENV_JS:-env.js}
 
 if [[ -f .env ]]
 then
-    export $(grep -v '^#' .env | xargs)
+    while IFS= read -r line
+    do
+        var="$(echo "$line" | grep -v '^#' | xargs -0)"
+        [ -z "$var" ] && continue
+        IFS='=' read -r key value <<< "$var"
+        export "$key=$value"
+    done < .env
 fi
 
 # get any environment vars set in `env` which are whitelisted variables.
